@@ -1,23 +1,26 @@
 import React from "react";
 import './App.css';
-import { Routes, Route,Navigate } from 'react-router-dom';
-import Contacts from "./Redux/Contact/Contact-list/ContactList";
+import { Routes, Route} from 'react-router-dom';
+import Home from "./Pages/Home";
+import AddEditUser from "./Pages/AddEditUser";
+import UserInfo from "./Pages/UserInfo";
+import About from "./Pages/About";
+import Header from "./Components/Header";
+
 
 
 const App = () => {
 
   return (
     <React.Fragment>
-      
-     
-      <Contacts/>
-      {/* <Routes>
-        <Route path={'/'} element={<Navigate to={'/contacts/list'}/>}/>
-        <Route path={'/contacts/list'} element={<ContactList/>}/>
-        <Route path={'/contacts/add'} element={<AddContact/>}/>
-        <Route path={'/contacts/view/:contactId'} element={<ViewContact/>}/>
-        <Route path={'/contacts/edit/:contactId'} element={<EditContact/>}/>
-      </Routes> */}
+  <Header/>
+       <Routes>
+       <Route path={'/'} element={<Home/>}/> 
+       <Route path={'/abot'} element={<About/>}/>
+        <Route path={'/addEdit'} element={<AddEditUser/>}/>
+        <Route path={'/addEdit/:contactId'} element={<AddEditUser/>}/>
+        <Route path={'/userInfo/:contactId'} element={<UserInfo/>}/>
+      </Routes> 
     </React.Fragment>
   );
 }
