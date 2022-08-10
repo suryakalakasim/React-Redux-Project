@@ -18,7 +18,7 @@ const App = () => {
        <Route path={'/'} element={<Home/>}/> 
        <Route path={'/abot'} element={<About/>}/>
         <Route path={'/addEdit'} element={<AddEditUser/>}/>
-        <Route path={'/addEdit/:contactId'} element={<AddEditUser/>}/>
+        <Route path={'/editUser/:contactId'} element={<AddEditUser/>}/>
         <Route path={'/userInfo/:contactId'} element={<UserInfo/>}/>
       </Routes> 
     </React.Fragment>
