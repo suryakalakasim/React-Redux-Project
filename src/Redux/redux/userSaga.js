@@ -14,10 +14,10 @@ function* onGetContactAsync() {
         yield put(contactsError(error.response.data))
     }
 }
-function* onCreateContactAsync(action) {
-    console.log('onCreateContactAsync==>', action, action.payload);
+function* onCreateContactAsync({payload}) {
+    console.log('onCreateContactAsync==>',payload);
     try {
-        const response = yield call(createContactsApi, action?.payload)
+        const response = yield call(createContactsApi,payload)
         if (response.status === 200) {
             yield put(createContactsSuccess(response.data))
         }
